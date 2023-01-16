@@ -2,28 +2,17 @@
 // You should implement your task here.
 
 module.exports = function towelSort (matrix) {
-    //   return [];
-
-    // if(matrix === null || matrix === undefined) 
     if(!matrix) {
         return [];
-      }
+    }
     
-      const newArr = [];
-    
-      matrix.forEach(function (value, i) {
-        
-        i % 2 === 0 ? newArr.push(value) : newArr.push(value.reverse());
-      
-        // if(i % 2 === 0) {
-        //   newArr.push(value);
-        // } else {
-        //   newArr.push(value.reverse());
-        // }
-    
-      });
-    
-      return newArr.flat();
+    const newArr = [];
+
+    matrix.forEach(function (value, i) {
+    i % 2 === 0 ? newArr.push(value) : newArr.push(value.reverse());
+    });
+
+    return newArr.flat();
 }
 
 
